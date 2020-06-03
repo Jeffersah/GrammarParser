@@ -1,0 +1,74 @@
+﻿# PROGRAM
+
+Program -> {statements}
+Program -> {statements} {seperator}
+
+statements -> {statements} {seperator} {statement}
+statements -> {statement}
+
+statement -> {invokation}
+
+
+# function calls / invokations
+
+invokation -> {selectorchain}
+
+selectorchain -> {selectorchain} {selectorseperator} {selector}
+selectorchain -> {selector}
+
+selector -> {name}
+selector -> {name} ( {arglist} )
+selectorseperator -> .
+selectorseperator -> [ {arglist} ]
+
+# Common constructs
+
+arglist -> {arglist} {arg}
+
+arglist -> {arg}
+arglist ->
+
+arg -> {E}
+
+
+# Fundamentals
+
+name -> <alpha>
+name -> {name} <alpha>
+name -> {name} <digit>
+
+[-1] so -> 
+[1] so -> {s}
+
+s -> <space>
+s -> <space> {s}
+
+[1] lineoptional -> {newlinerepeat}
+[-1] lineoptional -> 
+
+newlinerepeat -> <newline>
+newlinerepeat -> {newlinerepeat} <newline>
+
+seperator -> {so} {newlinerepeat} {so}
+seperator -> {so} ; {lineoptional} {so}
+
+
+
+# MATH
+
+
+E -> {T}
+E -> {E} + {T}
+E -> {E} - {T}
+
+
+T -> {T} * {N}
+T -> {T} / {N}
+T -> {N}
+
+N -> {V}
+N -> - {V}
+
+V -> <number>
+V -> ( {E} )
+V -> {selector}

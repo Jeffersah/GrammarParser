@@ -1,0 +1,91 @@
+﻿# PROGRAM
+
+Program -> {statements}
+
+statements -> {statements} {s} {statement}
+statements -> {statement}
+
+# END: PROGRAM
+
+# What is a valid statement?
+
+statement -> {assignment}
+statement -> {loopConstruct} {statementBlock}
+statement -> {ifConstruct} {statementBlock}
+statement -> {ifConstruct} {statementBlock} {elifchain}
+statement -> {fullInvoke}
+
+# END: statements
+
+
+# Define those statement types
+
+statementBlock -> {statement}
+statementBlock -> { {statement} }
+
+assignment -> <name> = {E}
+assignment -> <name> += {E}
+assignment -> <name> -= {E}
+assignment -> <name> *= {E}
+assignment -> <name> /= {E}
+
+fullInvoke -> <name> {invokeChain}
+fullInvoke -> <name> ( {argchain} )
+
+
+loopConstruct -> loop ( {E} )
+loopConstruct -> loop ( <name>; {E} )
+loopConstruct -> loop ( <name>; {E}; {E} )
+loopConstruct -> while ( {C} )
+
+ifConstruct -> if ( {C} )
+elifchain -> else {statementBlock}
+
+invokeChain -> invokeChain invoke
+invokeChain -> invoke
+
+invoke -> . <name>
+invoke -> . <name> ( {argchain} )
+invoke -> [ {E} ]
+
+argchain -> {argchain} {E}
+argchain -> {E}
+argchain -> 
+
+# MATH EXPRESSION
+
+C -> {E} {C_OP} {E}
+C_OP -> ==
+C_OP -> >
+C_OP -> <
+C_OP -> >=
+C_OP -> <=
+C_OP -> !=
+
+E -> {T}
+E -> {E} + {T}
+E -> {E} - {T}
+E -> - {E}
+E -> {fullInvoke}
+
+T -> {T} * {N}
+T -> {T} / {N}
+T -> {N}
+
+N -> {V}
+N -> - {V}
+
+V -> <number>
+V -> <name>
+V -> ( {E} )
+
+# END: MATH EXPRESSION
+
+
+# PSEUDO-LITERALS
+
+s -> ; <whitespace>
+s -> <whitespace>
+s -> ;
+
+# END: PSEUDO-LITERALS

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrammarParser", "GrammarParser\GrammarParser.csproj", "{2705D6E4-AD77-4439-A85D-A0A5FB0488BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrammarParserTest", "GrammarParserTest\GrammarParserTest.csproj", "{6FD7BC8D-E595-4188-875B-BCB86601AC75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2705D6E4-AD77-4439-A85D-A0A5FB0488BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2705D6E4-AD77-4439-A85D-A0A5FB0488BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2705D6E4-AD77-4439-A85D-A0A5FB0488BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2705D6E4-AD77-4439-A85D-A0A5FB0488BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD7BC8D-E595-4188-875B-BCB86601AC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD7BC8D-E595-4188-875B-BCB86601AC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD7BC8D-E595-4188-875B-BCB86601AC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD7BC8D-E595-4188-875B-BCB86601AC75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {313961B1-FE4A-492D-A628-769FCC3940A4}
+	EndGlobalSection
+EndGlobal
